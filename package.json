@@ -1,0 +1,23 @@
+{
+  "name": "velopert-modern-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynjnkn/velopert-modern-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ynjnkn/velopert-modern-react/issues"
+  },
+  "homepage": "https://github.com/ynjnkn/velopert-modern-react#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
