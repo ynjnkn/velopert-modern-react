@@ -48,7 +48,7 @@ const reducer = (state = initialState, action) => {
 };
 
 const store = createStore(reducer);
-console.log("스토어", store.getState());
+console.log("스토어 변경 전", store.getState());
 
 const listener = () => {
   const state = store.getState();
@@ -58,11 +58,16 @@ const listener = () => {
 const unsubscribe = store.subscribe(listener);
 // unsubscribe();
 
-console.log("INCREASE 실행");
-store.dispatch(increase());
-console.log("DECREASE 실행");
-store.dispatch(decrease());
-console.log("CHANGE_TEXT 실행");
-store.dispatch(changeText("안녕하세요."));
-console.log("ADD_TO_LIST 실행");
-store.dispatch(addToList({ id: 1, text: "와우" }));
+// console.log("INCREASE 실행");
+// store.dispatch(increase());
+// console.log("DECREASE 실행");
+// store.dispatch(decrease());
+// console.log("CHANGE_TEXT 실행");
+// store.dispatch(changeText("안녕하세요."));
+// console.log("ADD_TO_LIST 실행");
+store.dispatch(addToList({ id: 1, text: "todo1" }));
+store.dispatch(addToList({ id: 2, text: "todo2" }));
+store.dispatch(addToList({ id: 3, text: "todo3" }));
+store.dispatch(addToList({ id: 4, text: "todo4" }));
+store.dispatch(addToList({ id: 5, text: "todo5" }));
+console.log("스토어 변경 후", store.getState());
