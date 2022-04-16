@@ -13,8 +13,7 @@ const Counter = ({ number, diff, onIncrease, onDecrease, onSetDiff }) => {
         <h1>Difference: {diff}</h1>
       )}
       <div>
-        {/* <input type="number" defaultValue={diff} onChange={onChange} /> */}
-        <input type="number" onChange={onChange} />
+        <input type="number" defaultValue={diff} onChange={onChange} />
         <button onClick={onIncrease}>+</button>
         <button onClick={onDecrease}>-</button>
       </div>
