@@ -13,6 +13,16 @@ function App() {
   const selectModeHandler = (event) => {
     setMode(event.value);
   };
+
+  return (
+    <div>
+      <CounterContainer />
+      <hr />
+      <TodosContainer />
+    </div>
+  );
+
+  /*
   return (
     <div>
       <div>기능 선택</div>
@@ -25,6 +35,7 @@ function App() {
       {mode === "counter" ? <CounterContainer /> : <TodosContainer />}
     </div>
   );
+  */
 }
 
 export default App;

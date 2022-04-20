@@ -1,14 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
+
 /* Initial State */
 // initialState = [todo1, todo2, todo3, ... ]
-// const initialState = [
-//   // 각 todo의 데이터 구조
-//   {
-//     id: Date.now(),
-//     text: "예시",
-//     done: false,
-//   },
-// ];
-
 const initialState = [];
 
 /* Action Types */
@@ -20,7 +13,7 @@ const TOGGLE_TODO = "todos/TOGGLE_TODO";
 export const addTodo = (text) => ({
   type: ADD_TODO,
   todo: {
-    id: Date.now(),
+    id: uuidv4(),
     text,
     done: false,
   },
