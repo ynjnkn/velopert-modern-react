@@ -6,11 +6,11 @@ const Counter = ({ number, diff, onIncrease, onDecrease, onSetDiff }) => {
   };
   return (
     <div>
-      <h1>Current Value: {number}</h1>
+      <div>Current Value: {number}</div>
       {!diff && diff !== 0 ? (
-        <h1>Difference: 숫자를 입력해주세요</h1>
+        <div>Difference: 숫자를 입력해주세요</div>
       ) : (
-        <h1>Difference: {diff}</h1>
+        <div>Difference: {diff}</div>
       )}
       <div>
         <input type="number" defaultValue={diff} onChange={onChange} />

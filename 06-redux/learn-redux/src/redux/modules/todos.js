@@ -1,25 +1,28 @@
 /* Initial State */
-const initialState = [
-  // 각 todo의 데이터 구조
-  {
-    id: 1,
-    text: "예시",
-    done: false,
-  },
-];
-// [todo1, todo2, todo3, ... ]
+// initialState = [todo1, todo2, todo3, ... ]
+// const initialState = [
+//   // 각 todo의 데이터 구조
+//   {
+//     id: Date.now(),
+//     text: "예시",
+//     done: false,
+//   },
+// ];
+
+const initialState = [];
 
 /* Action Types */
 const ADD_TODO = "todos/ADD_TODO";
 const TOGGLE_TODO = "todos/TOGGLE_TODO";
 
 /* Action Creators */
-let nextId = 1; // todo 데이터에서 사용할 고유 키
+// let nextId = 1; // todo 데이터에서 사용할 고유 키
 export const addTodo = (text) => ({
   type: ADD_TODO,
   todo: {
-    id: nextId++,
+    id: Date.now(),
     text,
+    done: false,
   },
 });
 export const toggleTodo = (id) => ({ type: TOGGLE_TODO, id });
@@ -38,4 +41,5 @@ const todos = (state = initialState, action) => {
       return state;
   }
 };
+
 export default todos;
