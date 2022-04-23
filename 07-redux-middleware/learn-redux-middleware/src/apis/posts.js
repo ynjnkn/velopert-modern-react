@@ -33,5 +33,5 @@ export const getPosts = async () => {
 
 export const getPostById = async (id) => {
   await sleep(1000);
-  return posts.find((post) => (post.id = id));
+  return posts.find((post) => post.id === id);
 };

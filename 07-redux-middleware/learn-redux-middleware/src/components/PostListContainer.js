@@ -14,7 +14,7 @@ const PostListContainer = () => {
 
   if (loading) return <div>로딩중...</div>;
   if (error) return <div>에러 발생!</div>;
-  if (!data) return null;
+  if (!data) return <div>찾을 수 없는 페이지</div>;
   return <PostList posts={data} />;
 };
 

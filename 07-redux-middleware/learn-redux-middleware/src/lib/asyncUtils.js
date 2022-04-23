@@ -3,6 +3,7 @@ export const createPromiseThunk = (type, promiseCreator) => {
   const [SUCCESS, ERROR] = [`${type}_SUCCESS`, `${type}_ERROR`];
   return (param) => async (dispatch) => {
     try {
+      console.log({ param });
       // throw new Error("그냥 에러 테스트");
       dispatch({ type, param }); // 요청 시작
       const payload = await promiseCreator(param); // 결과물의 이름을 payload 라는 이름으로 통일
